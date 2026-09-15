@@ -11,16 +11,19 @@ import java.util.List;
 @Configuration
 public class GatewayCorsConfig {
 
-    @Bean
-    public CorsFilter corsFilter() {
-        CorsConfiguration corsConfig = new CorsConfiguration();
-        corsConfig.setAllowedOrigins(List.of("*")); // ajusta a tu dominio en producción
-        corsConfig.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH"));
-        corsConfig.setAllowedHeaders(List.of("*"));
+    // @Bean
+    // public CorsFilter corsFilter() {
+    // CorsConfiguration corsConfig = new CorsConfiguration();
+    // corsConfig.setAllowedOrigins(List.of("*")); // ajusta a tu dominio en
+    // producción
+    // corsConfig.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE",
+    // "OPTIONS", "PATCH"));
+    // corsConfig.setAllowedHeaders(List.of("*"));
 
-        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
-        source.registerCorsConfiguration("/**", corsConfig);
+    // UrlBasedCorsConfigurationSource source = new
+    // UrlBasedCorsConfigurationSource();
+    // source.registerCorsConfiguration("/**", corsConfig);
 
-        return new CorsFilter(source);
-    }
+    // return new CorsFilter(source);
+    // }
 }
