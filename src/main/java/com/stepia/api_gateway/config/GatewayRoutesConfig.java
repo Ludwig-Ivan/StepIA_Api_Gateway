@@ -22,7 +22,7 @@ public class GatewayRoutesConfig {
                                 .route(
                                                 path("/api/core-service/**"),
                                                 http())
-                                .before(uri("https://core-service-255553194796.northamerica-south1.run.app"))
+                                .before(uri("http://stepia-core-service:8081"))
                                 .before(rewritePath(
                                                 "/api/core-service/(?<segment>.*)",
                                                 "/${segment}"))
@@ -36,7 +36,7 @@ public class GatewayRoutesConfig {
                                 .route(
                                                 path("/api/document-service/**"),
                                                 http())
-                                .before(uri("https://document-service-255553194796.northamerica-south1.run.app"))
+                                .before(uri("http://stepia-document-service:8082"))
                                 .before(rewritePath(
                                                 "/api/document-service/(?<segment>.*)",
                                                 "/${segment}"))
@@ -50,7 +50,7 @@ public class GatewayRoutesConfig {
                                 .route(
                                                 path("/api/ia-service/**"),
                                                 http())
-                                .before(uri("https://ia-service-255553194796.northamerica-south1.run.app"))
+                                .before(uri("http://stepia-ia-service:8083"))
                                 .before(rewritePath(
                                                 "/api/ia-service/(?<segment>.*)",
                                                 "/${segment}"))
