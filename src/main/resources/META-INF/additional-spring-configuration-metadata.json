@@ -1,0 +1,24 @@
+{
+    "properties": [
+        {
+            "name": "gateway.env.allowed-origins",
+            "type": "java.lang.String",
+            "description": "A description for 'gateway.env.allowed-origins'"
+        },
+        {
+            "name": "gateway.env.core-service-url",
+            "type": "java.lang.String",
+            "description": "A description for 'gateway.env.core-service-url'"
+        },
+        {
+            "name": "gateway.env.document-service-url",
+            "type": "java.lang.String",
+            "description": "A description for 'gateway.env.document-service-url'"
+        },
+        {
+            "name": "gateway.env.ia-service-url",
+            "type": "java.lang.String",
+            "description": "A description for 'gateway.env.ia-service-url'"
+        }
+    ]
+}
