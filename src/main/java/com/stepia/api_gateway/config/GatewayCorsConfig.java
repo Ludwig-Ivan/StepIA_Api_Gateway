@@ -12,13 +12,14 @@ import java.util.List;
 @Configuration
 public class GatewayCorsConfig {
 
-    @Value("gateway.env.allowed-origins")
+    @Value("${gateway.env.allowed-origins}")
     private String allowedOrigins;
 
     @Bean
     public CorsFilter corsFilter() {
         CorsConfiguration corsConfig = new CorsConfiguration();
         corsConfig.setAllowedOrigins(List.of(allowedOrigins.split(",")));
+        System.out.print(corsConfig);
         corsConfig.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE",
                 "OPTIONS", "PATCH"));
         corsConfig.setAllowedHeaders(List.of("*"));
